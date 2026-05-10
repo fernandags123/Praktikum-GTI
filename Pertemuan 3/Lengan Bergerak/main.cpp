@@ -9,7 +9,9 @@ static int palm = 0;
 static int finger = 0;
 
 void init(void) {
+
     glClearColor (0.0, 0.0, 0.0, 0.0);
+
     glShadeModel (GL_FLAT);
 }
 
@@ -53,17 +55,21 @@ void display(void) {
         glutWireCube(1.0);
     glPopMatrix();
 
+    // =================================================
+    // ================== 5 JARI =======================
+    // =================================================
+
     // ================= JARI 1 =================
     glPushMatrix();
 
-        glTranslatef(0.5, 0.15, 0.0);
+        glTranslatef(0.5, 0.20, 0.0);
 
         glRotatef((GLfloat) finger, 0.0, 0.0, 1.0);
 
         glTranslatef(0.3, 0.0, 0.0);
 
         glPushMatrix();
-            glScalef(0.6, 0.1, 0.1);
+            glScalef(0.6, 0.08, 0.08);
             glutWireCube(1.0);
         glPopMatrix();
 
@@ -72,14 +78,62 @@ void display(void) {
     // ================= JARI 2 =================
     glPushMatrix();
 
-        glTranslatef(0.5, -0.15, 0.0);
+        glTranslatef(0.5, 0.10, 0.0);
 
         glRotatef((GLfloat) finger, 0.0, 0.0, 1.0);
 
         glTranslatef(0.3, 0.0, 0.0);
 
         glPushMatrix();
-            glScalef(0.6, 0.1, 0.1);
+            glScalef(0.6, 0.08, 0.08);
+            glutWireCube(1.0);
+        glPopMatrix();
+
+    glPopMatrix();
+
+    // ================= JARI 3 =================
+    glPushMatrix();
+
+        glTranslatef(0.5, 0.0, 0.0);
+
+        glRotatef((GLfloat) finger, 0.0, 0.0, 1.0);
+
+        glTranslatef(0.3, 0.0, 0.0);
+
+        glPushMatrix();
+            glScalef(0.6, 0.08, 0.08);
+            glutWireCube(1.0);
+        glPopMatrix();
+
+    glPopMatrix();
+
+    // ================= JARI 4 =================
+    glPushMatrix();
+
+        glTranslatef(0.5, -0.10, 0.0);
+
+        glRotatef((GLfloat) finger, 0.0, 0.0, 1.0);
+
+        glTranslatef(0.3, 0.0, 0.0);
+
+        glPushMatrix();
+            glScalef(0.6, 0.08, 0.08);
+            glutWireCube(1.0);
+        glPopMatrix();
+
+    glPopMatrix();
+
+    // ================= JARI 5 =================
+    glPushMatrix();
+
+        glTranslatef(0.5, -0.20, 0.0);
+
+        glRotatef((GLfloat) finger, 0.0, 0.0, 1.0);
+
+        glTranslatef(0.3, 0.0, 0.0);
+
+        glPushMatrix();
+            glScalef(0.6, 0.08, 0.08);
             glutWireCube(1.0);
         glPopMatrix();
 
@@ -175,7 +229,7 @@ int main(int argc, char** argv) {
 
     glutInitWindowPosition (100, 100);
 
-    glutCreateWindow ("Lengan Robot");
+    glutCreateWindow ("Lengan Robot dengan 5 Jari");
 
     init();
 
